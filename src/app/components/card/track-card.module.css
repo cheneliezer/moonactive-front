@@ -1,0 +1,47 @@
+.mainGrid {
+  height: 400px;
+  position: relative;
+  width: 400px;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto !important;
+  align-items: flex-end;
+  cursor: pointer; }
+  .mainGrid:hover .details {
+    height: 30%;
+    width: 100%; }
+  .mainGrid .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+  .mainGrid .details {
+    transition: height 0.2s ease-in-out;
+    height: 10%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden; }
+    .mainGrid .details .trackName {
+      max-width: 75%;
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: bold; }
+    .mainGrid .details .artistName {
+      max-width: 75%;
+      font-size: 16px; }
+    .mainGrid .details .albumName {
+      max-width: 75%;
+      margin-bottom: 10px;
+      font-size: 16px; }
+
+.add {
+  position: absolute;
+  left: 15px;
+  top: 15px; }
+
+/*# sourceMappingURL=track-card.module.css.map */

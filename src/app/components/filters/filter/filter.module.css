@@ -1,0 +1,13 @@
+.mainGrid {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid white;
+  transition: all 0.1s ease-in-out; }
+  .mainGrid .textGrid {
+    color: white; }
+  .mainGrid.active {
+    border: 1px solid #993a44; }
+    .mainGrid.active .textGrid {
+      color: #993a44; }
+
+/*# sourceMappingURL=filter.module.css.map */

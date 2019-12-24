@@ -1,0 +1,36 @@
+.mainGrid {
+  height: 100%;
+  width: 100%;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  border:none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline:none;
+  background-color: #13aa52;
+  .spinner {
+    border: 3px solid transparent; /* Light grey */
+    border-top: 3px solid white; /* Blue */
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    animation: spin 1.2s linear infinite;
+  }
+
+  &:hover {
+    background-color: #0f7939;
+  }
+  &:focus {
+    background-color: #09662e;
+  }
+
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

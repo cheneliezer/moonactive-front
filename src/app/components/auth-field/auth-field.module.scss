@@ -1,0 +1,17 @@
+.mainGrid {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  .labelGrid {
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: black;
+
+  }
+  .inputGrid {
+    display: flex;
+    font-size: 16px;
+    color: white;
+
+  }
+}

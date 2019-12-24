@@ -1,0 +1,59 @@
+.mainGrid {
+  overflow: auto;
+  background-color: black;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  flex:1;
+  padding: 10%;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f8ffe8+0,e3f5ab+33,b7df2d+100;Green+3D+%234 */
+  background: #f8ffe8; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #f8ffe8 0%, #e3f5ab 33%, #b7df2d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#b7df2d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    max-width: 500px;
+    height: 130px;
+    margin: 20px;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+
+    .textWrapper {
+      display: flex;
+      margin: 7px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 12px;
+    }
+    .urlWrapper {
+      display: flex;
+      align-items:center;
+      justify-content: center;
+
+    }
+    .textfieldWrapper {
+      display: flex;
+      margin: 7px;
+    }
+  }
+
+
+}
