@@ -12,7 +12,7 @@ import LoginScreen from './screens/login/login.screen';
 import UrlsScreen from './screens/urls/urls.screen';
 import { MAIN_ROUTE,URLS_DISPLAY_ROUTE,REGISTER_ROUTE, LOGIN_ROUTE } from './constants/local-related';
 import { getToken } from './store/auth/auth.public-selectors';
-import { init, loginUsingToken } from './store/auth';
+import { loginUsingToken } from './store/auth';
 import { ConnectedRouter } from 'connected-react-router';
 import urlsDisplayScreen from './screens/urls-display/urls-display.screen';
 interface PropsFromState {

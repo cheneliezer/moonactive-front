@@ -39,7 +39,7 @@ class UrlsDisplayScreen extends React.Component<AllProps, State> {
             <div className={classes.mainGrid}>
                 {
                     this.props.grid.map((urlData: SavedUrlVM) => (
-                        <Card className={classes.card}>
+                        <Card key={urlData.createdAt.toLocaleString()} className={classes.card}>
                             <div className={classes.textWrapper}>
                                 Saved at : {urlData.createdAt.toLocaleString()}
                             </div>

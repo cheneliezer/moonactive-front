@@ -1,4 +1,4 @@
-import {  mergeMap, catchError, map} from "rxjs/internal/operators";
+import {  mergeMap, catchError} from "rxjs/internal/operators";
 import {ActionsObservable, Epic, ofType} from "redux-observable";
 import {concat, from, of} from "rxjs/index";
 import {LoadingKey, setLoadingState} from "app/store/user-interface";

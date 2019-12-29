@@ -7,7 +7,7 @@ import {connect} from "react-redux";
 import {RouteComponentProps, withRouter} from "react-router-dom";
 import AuthField from "app/components/auth-field/auth-field.component";
 import Card from "app/components/card/card.component";
-import { loginRequest, register } from 'app/store/auth/auth.actions';
+import { loginRequest } from 'app/store/auth/auth.actions';
 
 import PrimaryButton from "app/components/primary-button/primary-button.component";
 import { Link } from "react-router-dom";

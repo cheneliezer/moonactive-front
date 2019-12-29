@@ -3,8 +3,7 @@ import {ActionsObservable, Epic, ofType} from "redux-observable";
 import {concat, from, of} from "rxjs/index";
 import {LoadingKey, setLoadingState} from "app/store/user-interface";
 import {loginWithTokenRequest} from "app/network/requests";
-import {AuthAction} from "app/store/auth";
-import { init } from "../auth.actions";
+import {AuthAction, init} from "app/store/auth";
 
 export const loginUsingTokenRequestEpic: Epic = (action$: ActionsObservable<any>) => action$.pipe(
     ofType(AuthAction.LOGIN_USING_TOKEN_REQUEST),

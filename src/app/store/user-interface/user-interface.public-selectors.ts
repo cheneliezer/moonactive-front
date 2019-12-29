@@ -6,6 +6,6 @@ export function getLoadingState(store: ApplicationState, key: LoadingKey): boole
     return _getLoadingState(store[UI_STORE], key);
 }
 
-export function getErrorState(store: ApplicationState, key: ErrorKey): boolean {
+export function getErrorState(store: ApplicationState, key: ErrorKey): string {
     return _getErrorState(store[UI_STORE], key);
 }

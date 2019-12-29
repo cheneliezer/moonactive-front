@@ -3,6 +3,6 @@ import {ErrorKey, LoadingKey, UserInterfaceState} from "app/store/user-interface
 export function _getLoadingState(store: UserInterfaceState, key: LoadingKey): boolean {
     return store.loading[key];
 }
-export function _getErrorState(store: UserInterfaceState, key: ErrorKey): boolean {
+export function _getErrorState(store: UserInterfaceState, key: ErrorKey): string {
     return store.errors[key];
 }

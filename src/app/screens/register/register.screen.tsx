@@ -13,7 +13,6 @@ import { register } from 'app/store/auth/auth.actions';
 import { getLoadingState } from "app/store/user-interface/user-interface.public-selectors";
 import { LoadingKey } from "app/store/user-interface";
 import { getRegisterErrors } from "app/store/auth/auth.public-selectors";
-import FieldErrorSModel from "app/models/server-models/field-error.smodel";
 import FieldErrorVM from "app/models/vms/field-error.vm";
 import { FieldType } from "app/models/server-models/field-type.enum";
 interface PropsFromDispatch {
