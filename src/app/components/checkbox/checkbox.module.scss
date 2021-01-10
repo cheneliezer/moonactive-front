@@ -1,0 +1,21 @@
+.wrapper {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #898b86;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .checkImg {
+        height: 12px;
+        width: 12px;
+    }
+    &.checked {
+        background-color:  rgba(227,245,171, 0.5);
+    }
+    &.hover {
+        background-color:  rgba(227,245,171, 0.2);
+    }
+}

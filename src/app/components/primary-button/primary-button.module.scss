@@ -13,6 +13,19 @@
   justify-content: center;
   outline:none;
   background-color: #13aa52;
+
+  &.empty {
+    background-color: transparent;
+    color: #13aa52;
+    &:hover {
+      color: white;
+      background-color: rgba(4, 58, 26, 0.2);
+    }
+    &:focus {
+      color: white;
+      background-color: rgba(19,170,82, 0.4);
+    }
+  }
   .spinner {
     border: 3px solid transparent; /* Light grey */
     border-top: 3px solid white; /* Blue */

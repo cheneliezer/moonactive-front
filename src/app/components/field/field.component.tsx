@@ -1,23 +1,23 @@
-//@ts-ignore
+import React from "react";
+import TextField, { TextFieldProps } from "../text-field/text-field.component";
 import classes from './field.module.scss';
-import * as React from "react";
+
 interface Props {
-    title: string;
-    description: string;
+    label: string;
+    textfieldProps: TextFieldProps;
 }
 const Field: React.SFC<Props> = (props: Props) => {
+    const { label, textfieldProps} = props;
+
     return (
         <div className={classes.mainGrid}>
-            <div className={classes.titleGrid}>
-                {
-                    props.title
-                }
+            <div className={classes.labelGrid}>
+                {label}
             </div>
-            <div className={classes.descriptionGrid}>
-                {
-                    props.description
-                }
+            <div className={classes.inputGrid}>
+                <TextField {...textfieldProps}/>   
             </div>
+
         </div>
     )
 };

@@ -1,9 +1,8 @@
 {
-  "name": "react-redux-typescript-boilerplate",
+  "name": "moonactive-promotions",
   "version": "1.0.1",
   "private": true,
-  "description": "S",
-  "homepage": "https://rokoroku.github.io/react-redux-typescript-boilerplate",
+  "description": "MoonActive Promotions",
   "keywords": [
     "react",
     "redux",
@@ -75,10 +74,12 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^3.0.1",
+    "react-sortablejs": "^6.0.0",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.4",
     "redux-observable": "^1.1.0",
     "rxjs": "^6.5.2",
+    "sortablejs": "^1.10.2",
     "typesafe-actions": "^4.4.2"
   }
 }

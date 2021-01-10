@@ -1,5 +1,4 @@
-import * as React from "react";
-//@ts-ignore
+import React from "react";
 import classes from './card.module.scss';
 import classNames from 'classnames';
 interface Props {

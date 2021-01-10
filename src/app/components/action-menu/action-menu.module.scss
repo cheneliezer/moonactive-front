@@ -1,0 +1,22 @@
+.wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 40%;
+    min-width: 300px;
+    background-color: rgba(23,72,36,0.8);
+    padding: 16px;
+    border-radius: 8px;
+    bottom: -40px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 3px 3px 3px rgba(0,0,0,.14), 0 2px 2px 0 rgba(0,0,0,.098), 0 1px 5px 0 rgba(0,0,0,.084);
+    opacity: 0;
+
+    &.open {
+        opacity: 1;
+        bottom: 10px;
+    }
+}

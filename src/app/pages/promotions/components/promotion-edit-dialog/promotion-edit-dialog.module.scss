@@ -1,0 +1,24 @@
+.dialog {
+  min-width: 400px;
+  max-width: 950px;
+  width: 40%;
+
+  .forms {
+    width: 100%;
+  }
+  .labelGrid {
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: black;
+  }
+  .typeWrapper {
+    display: inline-block;
+    margin: 2px 8px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

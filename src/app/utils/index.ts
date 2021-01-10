@@ -1,19 +1,15 @@
-import { FieldType } from "app/models/server-models/field-type.enum";
-import { LAST_NAME, FIRST_NAME, PASSWORD, EMAIL } from "app/constants/field-names";
+import PromotionSModel from "app/models/server-models/promotion.smodel"
+import PromotionVM from "app/models/vms/promotion.vm"
 
-export const mapFieldTypeToName = {
-    [FieldType.LAST_NAME]: LAST_NAME,
-    [FieldType.FIRST_NAME]: FIRST_NAME,
-    [FieldType.PASSWORD]: PASSWORD,
-    [FieldType.EMAIL]: EMAIL
-}
+export const createPromotionsVM = (promotions: Array<PromotionSModel>) : Array<PromotionVM> => promotions.map(createPromotionVM)
 
-export const validateUrl = (myURL: string) => {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-  return !!pattern.test(myURL);
- }
+export const createPromotionVM = ( ({id, name, type, startDate, endDate, userGroupName} : PromotionSModel) => (
+    {
+        id,
+        name,
+        type,
+        startDate: new Date(startDate).toLocaleDateString(),
+        endDate: new Date(endDate).toLocaleDateString(),
+        userGroupName,
+    }
+))

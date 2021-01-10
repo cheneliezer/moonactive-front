@@ -1,0 +1,15 @@
+.sortItem {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    cursor: pointer;
+
+    .sortIcon {
+        height: 16px;
+        width: 16px;
+    }
+    .sortText {
+        font-size: 14px;
+        margin-left: 16px;
+    }
+}

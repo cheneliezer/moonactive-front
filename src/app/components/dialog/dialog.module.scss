@@ -1,0 +1,69 @@
+.background {
+  position: fixed;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.5);
+
+  &.hidden {
+    display: none;
+  }
+
+  .dialog {
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 3px 3px 3px rgba(0,0,0,.14), 0 2px 2px 0 rgba(0,0,0,.098), 0 1px 3px 0 rgba(0,0,0,.084);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    .closeWrapper {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      height: 32px;
+      width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+
+      .closeIcon {
+        height: 14px;
+        width: 14px;
+      }
+      &:hover {
+        background-color: rgba(227,245,171, 0.5);
+      }
+    }
+
+    .title {
+      font-size: 26px;
+      margin-bottom: 24px;
+      color:#13aa52;
+    }
+
+    .dialogBody {
+      display: flex;
+      flex: 1;
+    }
+    .dialogButtons {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      width: "100%";
+      .rightButton {
+        width: 150px;
+      }
+      .leftButton {
+        width: 150px;
+      }
+    }
+  }
+}

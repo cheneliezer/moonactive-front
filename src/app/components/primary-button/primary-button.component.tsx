@@ -1,17 +1,18 @@
-import * as React from "react";
-//@ts-ignore
-import classes from './primary-button.module.scss';
+import React from "react";
 import classNames from 'classnames';
+import classes from './primary-button.module.scss';
+
 interface Props {
     text: React.ReactNode;
+    variant?: 'empty' | 'filled'
     onClick: () => void;
     className?: string;
     loading?: boolean;
 }
 
-const PrimaryButton: React.SFC<Props> = (props: Props) => (
-    <button onClick={props.onClick} className={classNames(classes.mainGrid, props.className)} >
-        { props.loading ? <div className={classes.spinner} />  : props.text}
+const PrimaryButton: React.SFC<Props> = ({text, variant, onClick , className, loading }: Props) => (
+    <button onClick={onClick} className={classNames(classes.mainGrid, {[classes.empty]: variant === 'empty'}, className)} >
+        { loading ? <div className={classes.spinner} />  : text}
     </button>);
 
 export default PrimaryButton;

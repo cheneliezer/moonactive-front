@@ -1,6 +1,5 @@
-//@ts-ignore
+import React from "react";
 import classes from './text-field.module.scss';
-import * as React from "react";
 
 export interface TextFieldProps {
     value: string;

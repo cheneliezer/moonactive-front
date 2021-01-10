@@ -1,8 +1,9 @@
-export default interface NetworkRequest{
+export default interface NetworkRequest {
     url: string,
     method: RequestType,
     headers?: {[headerNane: string] : string},
-    data?: any
+    data?: any,
+    params?: any
 }
 
 export enum RequestType {
