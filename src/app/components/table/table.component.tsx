@@ -73,7 +73,9 @@ const Table = ({ items, total, actions, loading, columns, checked, onSortColumns
                 {
                 columns.map(({key, cellRenderer} : TableColumnVM) => (
                       <div key={key} className={classes.rowItem}>
+                        <div className={classes.cell}>
                           { cellRenderer ? cellRenderer(items[index]) : items[index][key]}
+                        </div>
                       </div>
                 ))
               }
