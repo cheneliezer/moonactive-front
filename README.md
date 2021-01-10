@@ -4,6 +4,5 @@ How to run the project -
 2. npm start
 
 
-The project is using React + Redux + Rxjs;
+The project is using React and Typescript;
 
-It includes authentication, authentication with token, loading and error states.
