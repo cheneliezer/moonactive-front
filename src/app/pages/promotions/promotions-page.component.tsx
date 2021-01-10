@@ -88,7 +88,6 @@ const PromotionsPage = (props : {}) => {
         try {
             await deletePromotionRequest(id)
             const deletingPromotionIndex = promotions.findIndex(item => item.id === id)
-            console.log(deletingPromotionIndex)
             const newPromotions = promotions.filter(item => item.id !== id)
             setCheckedArray(checkedArray.filter(itemIndex => itemIndex !== deletingPromotionIndex))
             setTotal(total - 1)
