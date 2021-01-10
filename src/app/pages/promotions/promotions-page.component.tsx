@@ -5,7 +5,6 @@ import PromotionsResponseSModel from 'app/models/server-models/promotionsRespons
 import TableColumnVM from 'app/models/vms/table-column.vm';
 import Table from 'app/components/table/table.component';
 import PromotionVM from 'app/models/vms/promotion.vm';
-import emptyStateImg from '../../images/empty-state.png'
 import * as classNames from 'classnames';
 import PromotionEditDialog from './components/promotion-edit-dialog/promotion-edit-dialog.component';
 import ColumnSortDialog from './components/column-sort-dialog/column-sort-dialog.component';
@@ -14,19 +13,20 @@ import { bulkDeletePromotionsRequest, deletePromotionRequest, duplicatePromotion
 import { AxiosResponse } from 'axios';
 import { DEFAULT_TABLE_LIMIT } from 'app/constants/local-related';
 import PromotionDTO from 'app/models/dtos/promotion.dto';
-import classes from './promotions-page.module.scss';
 import trashIcon from 'app/images/trash.png';
 import { createPromotionsVM, createPromotionVM } from 'app/utils';
 import PromotionSModel from 'app/models/server-models/promotion.smodel';
 import PromotionTypeView from './components/promotion-type-view/promotion-type-view.component';
 import ActionMenu from 'app/components/action-menu/action-menu.componet';
+import classes from './promotions-page.module.scss';
+import EmptyState from 'app/components/empty-state/empty-state.component';
 
 
 const columns : Array<TableColumnVM> = [
     {
-        key: "name",
+        key: "userGroupName",
         type: "string",
-        label: "Name",
+        label: "User Group Name",
     },
     {
         key: "type",
@@ -35,38 +35,21 @@ const columns : Array<TableColumnVM> = [
         cellRenderer: (item: PromotionVM) => <PromotionTypeView type={item.type}/>
     },
     {
-        key: "startDate",
-        type: "string",
-        label: "Start Date",
-    },
-    {
         key: "endDate",
         type: "string",
         label: "End Date",
     },
     {
-        key: "userGroupName",
+        key: "startDate",
         type: "string",
-        label: "User Group Name",
-    }
+        label: "Start Date",
+    },
+    {
+        key: "name",
+        type: "string",
+        label: "Name",
+    },
 ]
-
-const EmptyState = () => {
-    return (
-        <div className={classes.emptyStateWrapper}>
-            <img src={emptyStateImg} className={classes.emptyStateImage}/>
-            <div className={classes.textWrapper}>
-                <div className={classes.title}>
-                    Oh no!
-                </div>
-                <div className={classes.description}>
-                    There are no promotions. Would you like to generate some ?
-                </div>
-            </div>
-        </div>
-    )
-}
-
 
 const PromotionsPage = (props : {}) => {
     const [promotions, setPromotions] = useState<Array<PromotionVM>>([])
@@ -252,6 +235,7 @@ const PromotionsPage = (props : {}) => {
     }
     const isShowingEmptyState = !loading && !promotions.length
     const sortedColumn = columns.sort(sortColumns)
+
     return (
         <div className={classes.mainGrid}>
             <ActionMenu open={checkedArray.length > 0} >
